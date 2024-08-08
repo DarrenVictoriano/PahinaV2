@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pahina-server"
+version = "0.1.0"
+description = ""
+authors = ["Darren Victoriano <darren.victoriano@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = { extras = ["standard"], version = "^0.112.0" }
+sqlalchemy = "^2.0.32"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "uvicorn pahina_server.main:app --reload"

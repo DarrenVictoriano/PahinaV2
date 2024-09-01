@@ -1,13 +1,11 @@
 from pydantic import BaseModel
 
-class TransactionBase(BaseModel):
-    amount: float
-    category: str
-    description: str
-    is_income:bool
+class ProjectBase(BaseModel):
+    title: str
+    content: str
     date: str
 
-class TransactionModel(TransactionBase):
+class ProjectModel(ProjectBase):
     id: int
 
     class Config:
